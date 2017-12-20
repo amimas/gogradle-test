@@ -15,6 +15,6 @@ golang {
 
 build {
     targetPlatform = ['linux-amd64']
-    
-    go 'build -o .gogradle/golang-project --ldflags "-extldflags -static"'
+    go 'build -o .gogradle/golang-project --ldflags "-extldflags -static" golang-project'
+    //go 'build -o .gogradle/golang-project --ldflags "-extldflags -static" golang-project'
 }
