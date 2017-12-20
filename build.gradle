@@ -1,0 +1,20 @@
+plugins {
+    id 'com.github.blindpirate.gogradle' version '0.8.0'
+}
+
+dependencies {
+    golang {
+        build 'github.com/Shopify/sarama@v1.13.0'
+    }
+}
+
+golang {
+    packagePath = 'golang-project'
+    goVersion = '1.8.1'
+}
+
+build {
+    targetPlatform = ['linux-amd64']
+    
+    go 'build -o .gogradle/golang-project --ldflags "-extldflags -static"'
+}
