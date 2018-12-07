@@ -7,6 +7,6 @@ build_master:
   stage: build
   script:
     - echo "envioronment details"
-    - printenv
+    - cat /etc/redhat-releases
   tags:
     - exec-docker
