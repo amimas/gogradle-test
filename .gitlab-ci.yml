@@ -1,0 +1,12 @@
+image: wcnexus.torolab.ibm.com/centos:latest
+  
+stages:
+  - build
+
+build_master:
+  stage: build
+  script:
+    - echo "envioronment details"
+    - printenv
+  tags:
+    - exec-docker
